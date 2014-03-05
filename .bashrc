@@ -64,33 +64,17 @@ export CLICOLOR=1
 
 export EDITOR=vim
 
-# Use vi modal editing for readline
-# see http://www.catonmat.net/blog/bash-vi-editing-mode-cheat-sheet/
-set -o vi
-
 # export WORKON_HOME=/home/david/.virtualenvs
 # source /usr/local/bin/virtualenvwrapper_bashrc
 
 export PATH="$PATH:$HOME/bin:/usr/local/sbin:$HOME/.gem/ruby/1.8/bin:/usr/local/Cellar/ruby/1.9.2-p180/bin:$HOME/code/elastic-mapreduce"
 export NODE_PATH="$NODE_PATH:/usr/local/lib/node:/usr/local/lib/node_modules"
 
-case $TERM in
-xterm*)
-    # Set the prompt to a basic coloured current working directory
-    export PS1="\[\e[33;1m\] [ \w ]\$ \[\e[0m\]"
-    PROMPT_COMMAND=''
-    ;;
-screen*)
-    # Set the screen window name to the basename of the working directory
-    PROMPT_COMMAND='bpwd=$(basename `pwd`); echo -ne "\033]0;\007\033k${bpwd}\033\\"'
-    # Set the hardstatus to the working directory, which will display on GNU
-    # screen's caption as well as xterm's title bar. Now our prompt does not
-    # need to show the full directory path.
-    export PS1=' \[\e]2;\w\a\e[0;36m\]\t \[\e[0;33m\]\h \[\e[0;34m\]@ \[\e[32;1m\][ \W ]\[\e[0;35m\]`__git_ps1`\[\e[0m\] '
-    ;;
-*)
-    ;;
-esac
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\]$ "
+
 
 export PAGER=less
 
