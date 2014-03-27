@@ -66,8 +66,6 @@ fi
 # EC2 tools
 export EC2_HOME=~/w/ec2-api-tools-1.6.1.2
 export PATH=$PATH:$EC2_HOME/bin
-export AWS_ACCESS_KEY=AKIAJRPUTB6XRJWKAJHQ
-export AWS_SECRET_KEY=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
 
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
