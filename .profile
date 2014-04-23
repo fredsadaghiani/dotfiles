@@ -3,6 +3,10 @@
 
 export PATH=$PATH:~/bin:/usr/local/bin:/usr/local/sbin
 
+mkdir -p $HOME/go
+export GOPATH=$HOME/go
+
+
 alias jj='jobs'
 alias ls='ls -G' # Adds color on BSD
 alias ll='ls -l'
@@ -23,6 +27,10 @@ fi
 
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
   . /usr/local/etc/bash_completion.d/git-completion.bash
+fi
+
+if [ -f /usr/local/etc/bash_completion.d/go-completion.bash ]; then
+  . /usr/local/etc/bash_completion.d/go-completion.bash
 fi
 
 PS1='\u@\h:\[\033[0;36m\]\w\[\033[31m\] $(__git_ps1)\[\033[00m\]\$ '
@@ -62,10 +70,6 @@ then
     alias ping='colourify ping'
     alias traceroute='colourify /usr/sbin/traceroute'
 fi
-
-# EC2 tools
-export EC2_HOME=~/w/ec2-api-tools-1.6.1.2
-export PATH=$PATH:$EC2_HOME/bin
 
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump

@@ -22,9 +22,11 @@
   st = status
   ci = commit
   br = branch
+  ignore = update-index --assume-unchanged
+  unignore = update-index --no-assume-unchanged
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
   df = diff
   dfs = diff --staged
-  ls-ignored = ls-files --exclude-standard --ignored --others
   lp = log -p
   bw = blame -w  # Ignore whitespace changes
   outgoing = log origin/master..HEAD
@@ -52,4 +54,4 @@
 
 [push]
   # Push the current branch to its upstream branch if no refspec given, instead of all branches (the default)
-  default = upstream
+	default = current
