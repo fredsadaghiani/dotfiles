@@ -57,18 +57,18 @@ function hg() {
 GRC=`which grc`
 if [ "$TERM" != dumb ] && [ -n GRC ]
 then
-    alias colourify="$GRC -es --colour=auto"
-    alias configure='colourify ./configure'
-    alias diff='colourify diff'
-    alias make='colourify make'
-    alias gcc='colourify gcc'
-    alias g++='colourify g++'
-    alias as='colourify as'
-    alias gas='colourify gas'
-    alias ld='colourify ld'
-    alias netstat='colourify netstat'
-    alias ping='colourify ping'
-    alias traceroute='colourify /usr/sbin/traceroute'
+    alias grc="$GRC -e -s --colour=auto"
+    alias configure='grc ./configure'
+    alias diff='grc diff'
+    alias make='grc make'
+    alias gcc='grc gcc'
+    alias g++='grc g++'
+    alias as='grc as'
+    alias gas='grc gas'
+    alias ld='grc ld'
+    alias netstat='grc netstat'
+    alias ping='grc ping'
+    alias traceroute='grc /usr/sbin/traceroute'
 fi
 
 if [ -f `brew --prefix`/etc/autojump ]; then
