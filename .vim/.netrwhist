@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/freds/w/code/java/sift-testing'
-let g:netrw_dirhist_2='/Users/freds/w/code/java/sift-json/build'
-let g:netrw_dirhist_3='/Users/freds/w/code/java/sift-domain'
-let g:netrw_dirhist_4='/Users/freds/w/code/java/sift-json'
-let g:netrw_dirhist_5='/Users/freds/w/code'
-let g:netrw_dirhist_6='/Users/freds/w/code/beacon'
