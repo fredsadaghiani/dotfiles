@@ -44,6 +44,7 @@ alias tail_mongo='tail -f /usr/local/var/log/mongodb/output.log'
 
 # Add ssh keys
 ssh-add ~/.ssh/*.pem
+ssh-add ~/.ssh/id_rsa
 
 #shopt -s histappend # append the history to the histfile instead of overwriting it.
 export HISTFILESIZE=50000
@@ -79,4 +80,5 @@ if [ -f $(brew --prefix)/etc/bash_completion.d ]; then
   . $(brew --prefix)/etc/bash_completion.d
 fi
 
+export LOAD_PATH="~/w/code/ops/lib/ruby:$LOAD_PATH"
 rvm use 2.1.1
