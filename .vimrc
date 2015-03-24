@@ -5,5 +5,5 @@ call pathogen#infect()
 set expandtab sw=2
 
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
