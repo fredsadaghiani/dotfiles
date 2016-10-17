@@ -1,2 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/freds/w/angular2/typings'
+let g:netrw_dirhist_2='/Users/freds/w/angular2/app'
+let g:netrw_dirhist_3='/Users/freds/w/awsbuddy.rails/lib/tasks'
+let g:netrw_dirhist_4='/Users/freds/w/awsbuddy.rails/config'
+let g:netrw_dirhist_5='/Users/freds/w/awsbuddy.rails/app/views/kaminari'
+let g:netrw_dirhist_6='/Users/freds/w/awsbuddy.rails/app/views/search'
+let g:netrw_dirhist_7='/Users/freds/w/code/beacon'
+let g:netrw_dirhist_8='/Users/freds/w/awsbuddy.rails/config/environments'
+let g:netrw_dirhist_9='/Users/freds/w/awsbuddy.rails/app/views/console'

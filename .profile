@@ -2,10 +2,13 @@
 [[ -s "/Users/freds/.rvm/scripts/rvm" ]] && source "/Users/freds/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 export PATH=$PATH:~/bin:/usr/local/bin:/usr/local/sbin
+export PATH=$PATH:~/w/code/web/node_modules/.bin
+export PATH=$PATH:~/go/bin
 
 mkdir -p $HOME/go
 export GOPATH=$HOME/go
 
+export SIFT_SSH_USER=$(whoami)
 
 alias jj='jobs'
 alias ls='ls -G' # Adds color on BSD
@@ -81,4 +84,10 @@ if [ -f $(brew --prefix)/etc/bash_completion.d ]; then
 fi
 
 export LOAD_PATH="~/w/code/ops/lib/ruby:$LOAD_PATH"
-rvm use 2.1.1
+rvm use 2.2.3
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/freds/.sdkman"
+[[ -s "/Users/freds/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/freds/.sdkman/bin/sdkman-init.sh"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
