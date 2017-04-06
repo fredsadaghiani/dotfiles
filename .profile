@@ -84,7 +84,7 @@ if [ -f $(brew --prefix)/etc/bash_completion.d ]; then
 fi
 
 export LOAD_PATH="~/w/code/ops/lib/ruby:$LOAD_PATH"
-rvm use 2.2.3
+rvm use 2.3.3
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/freds/.sdkman"

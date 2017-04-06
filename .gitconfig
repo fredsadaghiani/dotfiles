@@ -52,6 +52,14 @@
   # Detect renames as well as copies
   renames = copies
 
+[difftool]
+  prompt = false
+
+[difftool "icdiff"]
+    cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
+
 [push]
   # Push the current branch to its upstream branch if no refspec given, instead of all branches (the default)
 	default = current
+[github]
+	user = fredsadaghiani
