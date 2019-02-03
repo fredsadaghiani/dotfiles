@@ -7,8 +7,8 @@
   excludesfile = ~/.gitignore_global
 
 [user]
-  name = Fred Sadaghiani
-  email = fred.sadaghiani@gmail.com
+	name = Fred Sadaghiani
+	email = fred.sadaghiani@gmail.com
 
 [color]
   status = auto
@@ -63,3 +63,14 @@
 	default = current
 [github]
 	user = fredsadaghiani
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[icdiff]
+	options = --highlight --line-numbers
+[credential "https://source.developers.google.com"]
+	helper = gcloud.sh
+[http]
+	cookiefile = /Users/freds/.gitcookies

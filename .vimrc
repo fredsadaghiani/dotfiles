@@ -2,6 +2,8 @@
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+set guifont=Monaco:h12
+
 filetype plugin indent on
 set tabstop=2
 set shiftwidth=2

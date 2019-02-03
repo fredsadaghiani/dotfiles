@@ -84,10 +84,22 @@ if [ -f $(brew --prefix)/etc/bash_completion.d ]; then
 fi
 
 export LOAD_PATH="~/w/code/ops/lib/ruby:$LOAD_PATH"
-rvm use 2.3.3
+rvm use 2.3.4
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/freds/.sdkman"
 [[ -s "/Users/freds/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/freds/.sdkman/bin/sdkman-init.sh"
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# 
+source ~/w/code/tools/envsetup.sh # && update_python_deps
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/freds/w/maxdata/google-cloud-sdk/path.bash.inc' ]; then source '/Users/freds/w/maxdata/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/freds/w/maxdata/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/freds/w/maxdata/google-cloud-sdk/completion.bash.inc'; fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
